@@ -1,16 +1,14 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Layout from './components/Layout';
-import Inicio from './pages/Inicio';
-import DisenosGrid from './pages/DisenosGrid';
+import Plantillas from './pages/Plantillas';
 import DisenoEditor from './pages/DisenoEditor';
 import Historial from './pages/Historial';
-import Admin from './pages/Admin';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -31,11 +29,10 @@ const AuthenticatedApp = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/disenos" element={<DisenosGrid />} />
-        <Route path="/disenos/:slug" element={<DisenoEditor />} />
+        <Route path="/" element={<Navigate to="/plantillas" replace />} />
+        <Route path="/plantillas" element={<Plantillas />} />
+        <Route path="/plantillas/:slug" element={<DisenoEditor />} />
         <Route path="/historial" element={<Historial />} />
-        <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>

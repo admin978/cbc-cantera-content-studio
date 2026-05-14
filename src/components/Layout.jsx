@@ -1,26 +1,24 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Home, Palette, FolderOpen, Settings, Menu, X } from "lucide-react";
+import { LayoutTemplate, FolderOpen, Menu, X } from "lucide-react";
 
 const navItems = [
-  { path: "/", label: "Inicio", icon: Home },
-  { path: "/disenos", label: "Diseños", icon: Palette },
+  { path: "/plantillas", label: "Plantillas", icon: LayoutTemplate },
   { path: "/historial", label: "Historial", icon: FolderOpen },
-  { path: "/admin", label: "Administración", icon: Settings },
 ];
 
 export default function Layout() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const esEditorDiseno = /^\/disenos\/.+/.test(location.pathname);
+  const esEditor = /^\/(plantillas)\/.+/.test(location.pathname);
 
   return (
     <div className="flex h-screen overflow-hidden" style={{ backgroundColor: "#F5F3FF" }}>
-      {!esEditorDiseno && open && (
+      {!esEditor && open && (
         <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={() => setOpen(false)} />
       )}
 
-      {!esEditorDiseno && (
+      {!esEditor && (
         <aside
           className={`fixed lg:static inset-y-0 left-0 z-50 w-60 flex flex-col transition-transform duration-300 lg:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`}
           style={{ backgroundColor: "#3B0764" }}
@@ -42,7 +40,7 @@ export default function Layout() {
 
           <nav className="flex-1 p-3 space-y-0.5">
             {navItems.map((item) => {
-              const isActive = location.pathname === item.path || (item.path !== "/" && location.pathname.startsWith(item.path));
+              const isActive = location.pathname === item.path || location.pathname.startsWith(item.path);
               const Icon = item.icon;
               return (
                 <Link
@@ -67,7 +65,7 @@ export default function Layout() {
       )}
 
       <div className="flex-1 flex flex-col min-w-0">
-        {!esEditorDiseno && (
+        {!esEditor && (
           <header className="lg:hidden flex items-center gap-3 px-4 py-3 bg-white border-b border-border">
             <button onClick={() => setOpen(true)} className="p-1.5 rounded hover:bg-gray-100">
               <Menu className="w-5 h-5" />
