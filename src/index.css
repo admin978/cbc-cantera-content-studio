@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+    --font-barlow: 'Barlow Condensed', sans-serif;
+    --background: 249 100% 98%;
+    --foreground: 244 55% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 244 55% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 244 55% 16%;
+    --primary: 272 75% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 100% 96%;
+    --secondary-foreground: 272 75% 40%;
+    --muted: 270 50% 95%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 270 75% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 30% 88%;
+    --input: 270 30% 88%;
+    --ring: 272 75% 40%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-[#F5F3FF] text-foreground; font-family: var(--font-inter); }
+}

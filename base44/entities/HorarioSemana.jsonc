@@ -1,0 +1,33 @@
+{
+  "name": "HorarioSemana",
+  "type": "object",
+  "properties": {
+    "fecha_inicio": {
+      "type": "string",
+      "format": "date",
+      "title": "Fecha inicio"
+    },
+    "fecha_fin": {
+      "type": "string",
+      "format": "date",
+      "title": "Fecha fin"
+    },
+    "etiqueta_fecha": {
+      "type": "string",
+      "title": "Etiqueta fecha"
+    },
+    "estado": {
+      "type": "string",
+      "title": "Estado",
+      "enum": [
+        "Borrador",
+        "Publicado"
+      ],
+      "default": "Borrador"
+    }
+  },
+  "required": [
+    "etiqueta_fecha",
+    "estado"
+  ]
+}

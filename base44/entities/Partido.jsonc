@@ -1,0 +1,55 @@
+{
+  "name": "Partido",
+  "type": "object",
+  "properties": {
+    "categoria": {
+      "type": "string",
+      "title": "Categor\u00eda",
+      "relationType": "Categoria",
+      "relationMultiple": false
+    },
+    "fecha": {
+      "type": "string",
+      "format": "date",
+      "title": "Fecha"
+    },
+    "hora": {
+      "type": "string",
+      "title": "Hora"
+    },
+    "rival": {
+      "type": "string",
+      "title": "Rival"
+    },
+    "es_local": {
+      "type": "boolean",
+      "title": "Es Local",
+      "default": true
+    },
+    "pabellon": {
+      "type": "string",
+      "title": "Pabell\u00f3n"
+    },
+    "jornada": {
+      "type": "number",
+      "title": "Jornada"
+    },
+    "competicion": {
+      "type": "string",
+      "title": "Competici\u00f3n",
+      "enum": [
+        "Liga Auton\u00f3mica",
+        "Copa",
+        "Torneo"
+      ]
+    }
+  },
+  "required": [
+    "categoria",
+    "fecha",
+    "hora",
+    "rival",
+    "pabellon",
+    "competicion"
+  ]
+}

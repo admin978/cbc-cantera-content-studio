@@ -1,0 +1,64 @@
+{
+  "name": "HorarioPartido",
+  "type": "object",
+  "properties": {
+    "semana": {
+      "type": "string",
+      "title": "Semana",
+      "relationType": "HorarioSemana",
+      "relationMultiple": false
+    },
+    "bloque": {
+      "type": "string",
+      "title": "Bloque",
+      "enum": [
+        "CANTERA",
+        "ESCUELA"
+      ]
+    },
+    "equipo": {
+      "type": "string",
+      "title": "Equipo"
+    },
+    "rival": {
+      "type": "string",
+      "title": "Rival"
+    },
+    "descansa": {
+      "type": "boolean",
+      "title": "Descansa",
+      "default": false
+    },
+    "dia": {
+      "type": "string",
+      "title": "D\u00eda",
+      "enum": [
+        "S\u00e1bado",
+        "Domingo"
+      ]
+    },
+    "hora": {
+      "type": "string",
+      "title": "Hora"
+    },
+    "pabellon": {
+      "type": "string",
+      "title": "Pabell\u00f3n"
+    },
+    "orden": {
+      "type": "number",
+      "title": "Orden",
+      "default": 0
+    },
+    "visible_en_grafico": {
+      "type": "boolean",
+      "title": "Visible en gr\u00e1fico",
+      "default": true
+    }
+  },
+  "required": [
+    "semana",
+    "bloque",
+    "equipo"
+  ]
+}

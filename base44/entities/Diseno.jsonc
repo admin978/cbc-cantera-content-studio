@@ -1,0 +1,27 @@
+{
+  "name": "Diseno",
+  "type": "object",
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "title": "Nombre"
+    },
+    "slug": {
+      "type": "string",
+      "title": "Slug"
+    },
+    "descripcion": {
+      "type": "string",
+      "title": "Descripci\u00f3n"
+    },
+    "activo": {
+      "type": "boolean",
+      "title": "Activo",
+      "default": true
+    }
+  },
+  "required": [
+    "nombre",
+    "slug"
+  ]
+}

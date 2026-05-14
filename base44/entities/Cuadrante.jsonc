@@ -1,0 +1,63 @@
+{
+  "name": "Cuadrante",
+  "type": "object",
+  "properties": {
+    "partido": {
+      "type": "string",
+      "title": "Partido",
+      "relationType": "Partido",
+      "relationMultiple": false
+    },
+    "categoria": {
+      "type": "string",
+      "title": "Categor\u00eda",
+      "relationType": "Categoria",
+      "relationMultiple": false
+    },
+    "convocados": {
+      "type": "array",
+      "title": "Convocados",
+      "items": {
+        "type": "string",
+        "relationType": "Jugador"
+      },
+      "maxItems": 12
+    },
+    "entrenador": {
+      "type": "string",
+      "title": "Entrenador"
+    },
+    "ayudante": {
+      "type": "string",
+      "title": "Ayudante"
+    },
+    "notas": {
+      "type": "string",
+      "title": "Notas"
+    },
+    "plantilla_id": {
+      "type": "string",
+      "title": "Plantilla ID"
+    },
+    "estado": {
+      "type": "string",
+      "title": "Estado",
+      "enum": [
+        "Borrador",
+        "Publicado"
+      ],
+      "default": "Borrador"
+    },
+    "formato_export": {
+      "type": "string",
+      "title": "Formato Export"
+    }
+  },
+  "required": [
+    "partido",
+    "categoria",
+    "convocados",
+    "entrenador",
+    "plantilla_id"
+  ]
+}

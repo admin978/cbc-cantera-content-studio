@@ -1,0 +1,1 @@
+export const LIDERES_FONDO = "https://res.cloudinary.com/dxmn0rojy/image/upload/fl_attachment:false/v1776334583/L%C3%8DDERES_ESTAD%C3%8DSTICOS_Fondo_tfhh3b.jpg";

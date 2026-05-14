@@ -1,0 +1,33 @@
+{
+  "name": "Categoria",
+  "type": "object",
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "title": "Nombre",
+      "enum": [
+        "Sub-8",
+        "Sub-10",
+        "Sub-12",
+        "Sub-14",
+        "Sub-16",
+        "Sub-18",
+        "Junior",
+        "Senior"
+      ]
+    },
+    "color_acento": {
+      "type": "string",
+      "title": "Color Acento"
+    },
+    "activa": {
+      "type": "boolean",
+      "title": "Activa",
+      "default": true
+    }
+  },
+  "required": [
+    "nombre",
+    "color_acento"
+  ]
+}

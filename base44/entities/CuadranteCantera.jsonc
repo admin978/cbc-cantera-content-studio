@@ -1,0 +1,27 @@
+{
+  "name": "CuadranteCantera",
+  "type": "object",
+  "properties": {
+    "etiqueta_fecha": {
+      "type": "string",
+      "title": "Etiqueta fecha"
+    },
+    "estado": {
+      "type": "string",
+      "title": "Estado",
+      "enum": [
+        "Borrador",
+        "Publicado"
+      ],
+      "default": "Borrador"
+    },
+    "notas": {
+      "type": "string",
+      "title": "Notas"
+    }
+  },
+  "required": [
+    "etiqueta_fecha",
+    "estado"
+  ]
+}

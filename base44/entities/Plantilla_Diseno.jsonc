@@ -1,0 +1,41 @@
+{
+  "name": "Plantilla_Diseno",
+  "type": "object",
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "title": "Nombre"
+    },
+    "descripcion": {
+      "type": "string",
+      "title": "Descripci\u00f3n"
+    },
+    "preview_url": {
+      "type": "string",
+      "title": "Preview URL"
+    },
+    "activa": {
+      "type": "boolean",
+      "title": "Activa",
+      "default": true
+    },
+    "formatos_disponibles": {
+      "type": "string",
+      "title": "Formatos Disponibles"
+    },
+    "template_key": {
+      "type": "string",
+      "title": "Template Key",
+      "enum": [
+        "clasico",
+        "bold",
+        "minimalista"
+      ]
+    }
+  },
+  "required": [
+    "nombre",
+    "descripcion",
+    "template_key"
+  ]
+}

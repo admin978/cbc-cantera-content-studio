@@ -1,0 +1,1 @@
+export const FONDO_22_URL = "https://media.base44.com/images/public/69d3915431e2bf4f3aef62ce/b4b06c91b_IMG_2542JPG1.jpg";

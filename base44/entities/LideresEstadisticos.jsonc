@@ -1,0 +1,43 @@
+{
+  "name": "LideresEstadisticos",
+  "type": "object",
+  "properties": {
+    "jugador1_nombre": {
+      "type": "string",
+      "title": "Jugador 1 - Nombre"
+    },
+    "jugador1_stat": {
+      "type": "string",
+      "title": "Jugador 1 - Puntos"
+    },
+    "jugador2_nombre": {
+      "type": "string",
+      "title": "Jugador 2 - Nombre"
+    },
+    "jugador2_stat": {
+      "type": "string",
+      "title": "Jugador 2 - Rebotes"
+    },
+    "jugador3_nombre": {
+      "type": "string",
+      "title": "Jugador 3 - Nombre"
+    },
+    "jugador3_stat": {
+      "type": "string",
+      "title": "Jugador 3 - Asistencias"
+    },
+    "estado": {
+      "type": "string",
+      "title": "Estado",
+      "enum": [
+        "Borrador",
+        "Publicado"
+      ],
+      "default": "Borrador"
+    }
+  },
+  "required": [
+    "jugador1_nombre",
+    "jugador1_stat"
+  ]
+}

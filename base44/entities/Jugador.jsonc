@@ -1,0 +1,50 @@
+{
+  "name": "Jugador",
+  "type": "object",
+  "properties": {
+    "nombre_completo": {
+      "type": "string",
+      "title": "Nombre Completo"
+    },
+    "apodo": {
+      "type": "string",
+      "title": "Apodo"
+    },
+    "dorsal": {
+      "type": "number",
+      "title": "Dorsal"
+    },
+    "posicion": {
+      "type": "string",
+      "title": "Posici\u00f3n",
+      "enum": [
+        "Base",
+        "Escolta",
+        "Alero",
+        "Ala-P\u00edvot",
+        "P\u00edvot"
+      ]
+    },
+    "categoria": {
+      "type": "string",
+      "title": "Categor\u00eda",
+      "relationType": "Categoria",
+      "relationMultiple": false
+    },
+    "foto_url": {
+      "type": "string",
+      "title": "Foto URL"
+    },
+    "activo": {
+      "type": "boolean",
+      "title": "Activo",
+      "default": true
+    }
+  },
+  "required": [
+    "nombre_completo",
+    "dorsal",
+    "posicion",
+    "categoria"
+  ]
+}

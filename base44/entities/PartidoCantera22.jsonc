@@ -1,0 +1,70 @@
+{
+  "name": "PartidoCantera22",
+  "type": "object",
+  "properties": {
+    "cuadrante": {
+      "type": "string",
+      "title": "Cuadrante",
+      "relationType": "CuadranteCantera22",
+      "relationMultiple": false
+    },
+    "bloque": {
+      "type": "string",
+      "title": "Bloque",
+      "enum": [
+        "CANTERA",
+        "ESCUELA"
+      ]
+    },
+    "equipo": {
+      "type": "string",
+      "title": "Equipo"
+    },
+    "rival": {
+      "type": "string",
+      "title": "Rival"
+    },
+    "descansa": {
+      "type": "boolean",
+      "title": "Descansa",
+      "default": false
+    },
+    "dia": {
+      "type": "string",
+      "title": "D\u00eda",
+      "enum": [
+        "",
+        "Lunes",
+        "Martes",
+        "Mi\u00e9rcoles",
+        "Jueves",
+        "Viernes",
+        "S\u00e1bado",
+        "Domingo"
+      ]
+    },
+    "hora": {
+      "type": "string",
+      "title": "Hora"
+    },
+    "pabellon": {
+      "type": "string",
+      "title": "Pabell\u00f3n"
+    },
+    "orden": {
+      "type": "number",
+      "title": "Orden",
+      "default": 0
+    },
+    "visible": {
+      "type": "boolean",
+      "title": "Visible",
+      "default": true
+    }
+  },
+  "required": [
+    "cuadrante",
+    "bloque",
+    "equipo"
+  ]
+}
