@@ -18,6 +18,10 @@
       "type": "boolean",
       "title": "Activo",
       "default": true
+    },
+    "preview_url": {
+      "type": "string",
+      "title": "Preview URL"
     }
   },
   "required": [
