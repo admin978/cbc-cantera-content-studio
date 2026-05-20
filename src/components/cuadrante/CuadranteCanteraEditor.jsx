@@ -217,9 +217,9 @@ export default function CuadranteCanteraEditor() {
   }
 
   return (
-    <div className="flex-1 overflow-y-auto flex flex-col">
+    <div className="flex-1 overflow-hidden flex flex-col lg:flex-row">
       {/* ── EDITOR ── */}
-      <div className="w-full p-5 space-y-4">
+      <div className="w-full lg:w-[40%] overflow-y-auto p-5 space-y-4 border-r border-gray-200">
 
         {/* Card: Configuración */}
         <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 space-y-4">
@@ -340,7 +340,7 @@ export default function CuadranteCanteraEditor() {
       </div>
 
       {/* ── PREVIEW ── */}
-      <div className="w-full border-t border-gray-200 bg-gray-50">
+      <div className="hidden lg:flex flex-col flex-1 overflow-hidden bg-gray-50">
         <div className="flex items-center justify-between px-5 py-3 bg-white border-b border-gray-200">
           <div className="flex items-center gap-2">
             <span className="text-sm font-semibold text-gray-700">Preview en tiempo real</span>
@@ -366,7 +366,7 @@ export default function CuadranteCanteraEditor() {
           </div>
         </div>
 
-        <div className="overflow-auto p-6 flex flex-col gap-3 items-start">
+        <div className="flex-1 overflow-auto p-6 flex justify-start items-start">
           <div
             style={{
               transformOrigin: "top left",
